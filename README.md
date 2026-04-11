@@ -24,6 +24,8 @@ transfers.
 - DNS Server
 - Group Policy Management
 - Active Directory Users and Computers (ADUC)
+- Windows 10 Pro
+- TCP/IPv4 Static IP Configuration
 
 ## Lab Environment
 
@@ -98,6 +100,13 @@ Transferred a user from the Finance department to HR by:
 - Following Privilege Creep prevention best practices by removing 
   all old group memberships before completing the transfer
 
+### 6. Domain Join — New Computer Setup
+Set up a Windows 10 Pro VM, configured static IP addressing, 
+and joined the machine to the homelab.local domain. Verified 
+successful domain authentication by logging in as john.smith 
+and confirming domain controller WIN-1FGEG1FMJLD as the 
+logon server using whoami and echo %logonserver% commands.
+
 ## What I Learned
 
 - How to install and configure Active Directory Domain Services (AD DS)
@@ -116,6 +125,9 @@ Transferred a user from the Finance department to HR by:
   Directory and when each is used in modern enterprise environments
 - How to troubleshoot VM boot issues and work with ISO files and 
   virtualization software
+- How to configure static IP addresses and DNS settings for domain connectivity
+- How to join a Windows 10 Pro machine to an Active Directory domain
+- How to verify domain authentication using whoami and logonserver commands
 
 ## Screenshots
 
@@ -160,9 +172,27 @@ Security Group*
 *Screenshot showing disabled account confirmation*
 <img width="750" height="522" alt="Screenshot 2026-04-05 145335" src="https://github.com/user-attachments/assets/f35010cc-9083-47de-85ef-30699ae21f84" />
 
+### Domain Join Verification — john.smith
+*Screenshot showing successful domain authentication via whoami 
+and logonserver commands confirming CLIENT01 joined homelab.local*
+<img width="966" height="362" alt="Screenshot 2026-04-11 145820" src="https://github.com/user-attachments/assets/c7cd4110-3b7a-4577-8560-898068f85319" />
+
+
+
+## Lab Architecture
+
+### Network topology
+| Machine | OS | IP Address | Role |
+|---|---|---|---|
+| WIN-1FGEG1FMJLD | Windows Server 2022 | 192.168.10.1 | Domain Controller / DNS |
+| CLIENT01 | Windows 10 Pro | 192.168.10.2 | Domain joined client |
+
+### Network
+Both machines connected via VirtualBox Internal Network (HomeLab-Network)
+
 ## Author
 **Justin Hernandez**  
 CIS Student — Cal Poly Pomona  
-IT/Cybersecurity Intern — LA-Tech.org  
+Information Technology Intern @ LA-Tech.org  
 [[GitHub Profile](https://github.com/jstn131)]  
 [[LinkedIn Profile](www.linkedin.com/in/jstn131)]
