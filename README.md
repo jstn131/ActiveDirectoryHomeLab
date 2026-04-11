@@ -26,6 +26,7 @@ transfers.
 - Active Directory Users and Computers (ADUC)
 - Windows 10 Pro
 - TCP/IPv4 Static IP Configuration
+- Remote Desktop Protocol (RDP)
 
 ## Lab Environment
 
@@ -107,6 +108,13 @@ successful domain authentication by logging in as john.smith
 and confirming domain controller WIN-1FGEG1FMJLD as the 
 logon server using whoami and echo %logonserver% commands.
 
+### 7. Remote Desktop — Helpdesk Remote Support
+Enabled RDP on CLIENT01 and established a remote desktop connection 
+from the Domain Controller to CLIENT01 using Remote Desktop Connection. 
+Demonstrated how helpdesk technicians remotely control user machines 
+without physical presence. Verified session takeover behavior when 
+connecting as Administrator while another user is logged in locally.
+
 ## What I Learned
 
 - How to install and configure Active Directory Domain Services (AD DS)
@@ -128,6 +136,14 @@ logon server using whoami and echo %logonserver% commands.
 - How to configure static IP addresses and DNS settings for domain connectivity
 - How to join a Windows 10 Pro machine to an Active Directory domain
 - How to verify domain authentication using whoami and logonserver commands
+- How to enable and configure Remote Desktop Protocol (RDP) on 
+  domain joined machines
+- How to use Remote Desktop Connection to remotely control computers
+  across a domain network
+- Why RDP sessions disconnect local users and the importance of 
+  helpdesk communication etiquette before remoting in
+- Why RDP is a common attack target and how organizations secure it
+  through VPN requirements and Group Policy
 
 ## Screenshots
 
