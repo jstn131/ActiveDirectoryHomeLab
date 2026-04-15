@@ -210,5 +210,3 @@ Both machines connected via VirtualBox Internal Network (HomeLab-Network)
 **Justin Hernandez**  
 CIS Student — Cal Poly Pomona  
 Information Technology Intern @ LA-Tech.org  
-[[GitHub Profile](https://github.com/jstn131)]  
-[[LinkedIn Profile](www.linkedin.com/in/jstn131)]
